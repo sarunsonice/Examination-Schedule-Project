@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            document.getElementById('file').onchange = function () {
+                debugger;
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.onload = function (progressEvent) {
+                    // Entire file
+                    console.log(this.result);
+                    // By lines
+                    var lines = this.result.split('\n');
+                    var list = [];
+                    for (var line = 0; line < lines.length; line++) {
+                        list.push(lines[line]);
+                    }
+
+            document.write('<table>');
+            document.write('<tr><th>Teams</th></tr>');
+            for(var i = 0; i < list.length; i++)
+            {
+             document.write('<tr><td>' + [i] + '</td></tr>');
+            }
+            document.write('</table>');
+
+                };
+                reader.readAsText(file);
+            };
+
+
+            
+           
+
+         });
+       
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <input type="file" name="file" id="file"/>
+            <button onclick="myFunction()">Try it</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+<script>
+function calc()
+{
+    var D = "";
+    var A = document.getElementById("num1").value;
+    var B = document.getElementById("op").value;
+    var C = document.getElementById("num2").value;
+    if(B == "+")
+    {
+        D = A+C;
+    }
+    elseif(B == "-")
+    {
+        D = A-C;
+    }
+    elseif(B == "*")
+    {
+        D = A*C;
+    }
+    elseif(B == "/")
+    {
+        D = A/C;
+    }
+    document.getElementById("result").innerHTML = D;
+}
+</script>
+
+<body>
+    <input type="text" id="num1" name="num1" />
+    <input type="text" id="op" name="op" />
+    <input type="text" id="num2" name="num2" />
+    <br />
+    <input type="button" value="Solve" onclick="calc()" />
+
+    <p id="result" name="r1">
+        <br />
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>JavaScript Tutorial - Arrays and Loops</title>
+	
+<style>
+table, th, td,tr {
+    border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<input type="text" id="myText" value="Some text...">
+<button onclick="myFunction()">Try it</button>
+	<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	function myFunction() {
+	var Tin = document.getElementById("myText").value;
+	var TinAr = Tin.split(" ");
+	document.write('<table>');
+	document.write('<tr><th>Teams</th></tr>');
+	for(var i = 0; i < TinAr.length; i++)
+	{
+		document.write('<tr><td>' + TinAr[i] + '</td></tr>');
+	}
+	document.write('</table>');
+    
+   }
+	</script>
+	<!-- END JAVASCRIPT -->
+</body>
+</html>

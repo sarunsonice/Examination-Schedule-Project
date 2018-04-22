@@ -1,0 +1,4 @@
+อ้างอิงการวนลูปแสดงตาราง https://github.com/colorfest/JavaScriptTutorial/blob/master/arrays_loops.html
+อ้างอิงโชว์อาร์เรย์https://www.w3schools.com/js/js_array_methods.asp
+อ้างอิงอัพโหลดไฟล์https://www.html5rocks.com/en/tutorials/file/dndfiles/
+css table https://codepen.io/faaezahmd/pen/dJeRex

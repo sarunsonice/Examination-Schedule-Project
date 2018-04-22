@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h3>A demonstration of how to access a Text Field</h3>
+
+<input type="text" id="myText" value="Some text...">
+
+<p>Click the "Try it" button to get the text in the text field.</p>
+<table id="myTable">
+  <tr id="myTr">
+  </tr>
+</table>
+<table id="myTable">
+  <tr id="myTDD">
+  </tr>
+</table>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="dem"></p>
+<script>
+function myFunction() {
+    var n = document.getElementById("myText").value;
+    var Tarray = n.slice(0,11);
+	var ne = n.split(" ");
+    var text ="<table>";
+	for (var i = 0; i < ne.length; i++) {
+        text += "<tr>" +ne[i]+"</tr>";
+    }
+    text +="</table>";
+    var t1 = document.createElement("TR");
+    document.getElementById("dem").innerHTML = text; 
+    var t2 = document.createTextNode(Tarray);
+    t1.appendChild(t1);
+    document.getElementById("myTDD").appendChild(t1); 
+     
+
+	var x = document.createElement("TD");
+    document.getElementById("demo").innerHTML = Tarray;
+    var t = document.createTextNode(Tarray);
+    x.appendChild(t);
+    document.getElementById("myTr").appendChild(x);	
+   
+    var Tarray2 = n.slice(5,8);
+	var c = document.createElement("TD");
+    document.getElementById("demo").innerHTML = Tarray2;
+    var d = document.createTextNode(Tarray2);
+    c.appendChild(d);
+    document.getElementById("myTr").appendChild(c);	
+    
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+<input type="text" id="myText" value="Some text...">
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+var fruits, text, fLen, i;
+
+fruits = document.getElementById("myText").value;
+var ne = fruits.split(" ");
+fLen = ne.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + ne[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
